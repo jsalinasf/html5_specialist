@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Defining a Table</title>
+        <style>
+            table {
+                width: 100%; /* much better for responsive design */
+                /* width: 400px; */
+            }
+            
+            table, tr, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            
+            th {
+                border: 1px solid black;
+                border-collapse: collapse;
+                background-color: black;
+                color: greenyellow
+            }
+
+            #bottom {
+                text-align: center;
+            }
+
+            caption {
+                color: gray;
+                font-weight: bold;
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        <!-- Same example as before but now using CSS style-->
+        
+        <table>
+            <caption>Student 01's favorite soccer Teams</caption>
+            <tr>
+                <th>Team</th><th>Country</th><th>Best Player</th>
+                
+            </tr>
+            <tr>
+                    <td>PSG</td><td>France</td><td>Neymar</td>
+            </tr>
+            <tr>
+                    <td>Barcelona</td><td rowspan="2">Spain</td><td>Messi</td>
+            </tr>
+            <tr>
+                    <td>Real Madrid</td><td>Modric</td>
+            </tr>
+            <tr>
+                    <td>Juventus</td><td>Italy</td><td>Ronaldo</td>
+            </tr>
+            <tr>
+                    <td>Machester City</td><td>England</td><td>De Bruyne</td>
+            </tr>
+            <tr>
+                <td id="bottom" colspan="3">For more awesome projects like this visit <a href="https://FrameworkTV.com" target="_blank">FrameworkTV.com</a></td>
+            </tr>            
+        </table>
+    </body>
+</html>
