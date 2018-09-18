@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lab #06</title>
+        <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+        <style>
+            .grid-2 {
+                display: grid;
+                grid-gap: 20px;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        </style>
+    </head>
+    <body>
+        <form action="#" method="POST">
+            <fieldset>
+                <label>Patient Name: <input type="patientName" id="patientName"></label>
+                <label>Date of Birth: <input type="date" id="dateOfBirth"></label> <br />
+                <p>Although dental personnel primarily treat the area around your mouth, your mouth is a part of your entire body.
+                    Health problems that you may have, or medication that you may be taking, could have an important relationship with 
+                    the dentistry you will receive. Thank you for answering the following questions.
+                </p>
+                <label>Are you under physician's care now?</label>
+                <label for="physicianCareYes">Yes</label>
+                <input type="radio" id="physicianCareYes" name="physicianCare" value="physicianCareYes">
+                <label for="physicianCareNo">No</label>
+                <input type="radio" id="physicianCareNo" name="physicianCare" value="physicianCareNo">
+                <label>if yes, please explain: <input type="text" id="physicianCareExplain"></label>
+                
+                <br />
+                
+                <label>Have you ever been hospitalized or had a major operation?</label>
+                <label for="majorOperationYes">Yes</label>
+                <input type="radio" id="majorOperationYes" name="majorOperation" value="majorOperationYes">
+                <label for="majorOperationNo">No</label>
+                <input type="radio" id="majorOperationNo" name="majorOperation" value="majorOperationNo">
+                <label>if yes, please explain: <input type="text" id="majorOperationExplain"></label>
+    
+                <br />
+                
+                <label>Have you ever had a serious head or neck injury?</label>
+                <label for="seriousInjuryYes">Yes</label>
+                <input type="radio" id="seriousInjuryYes" name="seriousInjury" value="seriousInjuryYes">
+                <label for="seriousInjuryNo">No</label>
+                <input type="radio" id="seriousInjuryNo" name="seriousInjury" value="seriousInjuryNo">
+                <label>if yes, please explain: <input type="text" id="seriousInjuryExplain"></label>
+    
+                <br />
+                
+                <label>Are you taking any medication, pills or drugs?</label>
+                <label for="takingMedicationYes">Yes</label>
+                <input type="radio" id="takingMedicationYes" name="takingMedication" value="takingMedicationYes">
+                <label for="takingMedicationNo">No</label>
+                <input type="radio" id="takingMedicationNo" name="takingMedication" value="takingMedicationNo">
+                <label>if yes, please explain: <input type="text" id="takingMedicationExplain"></label>
+    
+                <br />
+                
+                <label>Do you take, or have you taken, Phen-Fex or Redux?</label>
+                <label for="takeReduxYes">Yes</label>
+                <input type="radio" id="takeReduxYes" name="takeRedux" value="takeReduxYes">
+                <label for="takeReduxNo">No</label>
+                <input type="radio" id="takeReduxNo" name="takeRedux" value="takeReduxNo">
+                <label>if yes, please explain: <input type="text" id="takeReduxExplain"></label>
+    
+                <br />
+                
+                <label>Have you ever taken Fosamax, Boniva, Actonel or any other medications containing bishosphonates?</label>
+                <label for="takeFosamaxYes">Yes</label>
+                <input type="radio" id="takeFosamaxYes" name="takeFosamax" value="takeFosamaxYes">
+                <label for="takeFosamaxNo">No</label>
+                <input type="radio" id="takeFosamaxNo" name="takeFosamax" value="takeFosamaxNo">
+                <label>if yes, please explain: <input type="text" id="takeFosamaxExplain"></label>
+    
+                <br />
+                
+                <label>Are you on a special diet?</label>
+                <label for="specialDietYes">Yes</label>
+                <input type="radio" id="specialDietYes" name="specialDiet" value="specialDietYes">
+                <label for="specialDietNo">No</label>
+                <input type="radio" id="specialDietNo" name="specialDiet" value="specialDietNo">
+                <label>if yes, please explain: <input type="text" id="specialDietExplain"></label>
+    
+                <br />
+                
+                <label>Do you use tobacco?</label>
+                <label for="useTobaccoYes">Yes</label>
+                <input type="radio" id="useTobaccoYes" name="useTobacco" value="useTobaccoYes">
+                <label for="useTobaccoNo">No</label>
+                <input type="radio" id="useTobaccoNo" name="useTobacco" value="useTobaccoNo">
+                <label>if yes, please explain: <input type="text" id="useTobaccoExplain"></label>
+    
+                <br />
+                
+                <label>Do you use controlled substances?</label>
+                <label for="controlledSubstancesYes">Yes</label>
+                <input type="radio" id="controlledSubstancesYes" name="controlledSubstances" value="controlledSubstancesYes">
+                <label for="controlledSubstancesNo">No</label>
+                <input type="radio" id="controlledSubstancesNo" name="controlledSubstances" value="controlledSubstancesNo">
+                <label>if yes, please explain: <input type="text" id="controlledSubstancesExplain"></label>
+    
+                <fieldset>
+                    <legend>Women: Are you</legend>
+                    <label>Pregnant/Trying to get pregnant?</label>
+                    <label for="pregnantYes">Yes</label>
+                    <input type="radio" id="pregnantYes" name="pregnant" value="pregnantYes">
+                    <label for="pregnantNo">No</label>
+                    <input type="radio" id="pregnantNo" name="pregnant" value="pregnantNo">
+                    <label>Taking oral contraceptives?</label>
+                    <label for="contraceptivesYes">Yes</label>
+                    <input type="radio" id="contraceptivesYes" name="contraceptives" value="contraceptivesYes">
+                    <label for="contraceptivesNo">No</label>
+                    <input type="radio" id="contraceptivesNo" name="contraceptives" value="contraceptivesNo">
+                    <label>Nursing?</label>
+                    <label for="nursingYes">Yes</label>
+                    <input type="radio" id="nursingYes" name="nursing" value="nursingYes">
+                    <label for="nursingNo">No</label>
+                    <input type="radio" id="nursingNo" name="nursing" value="nursingNo">
+                </fieldset>
+    
+                <fieldset>
+                    <legend>Are you allergic to any of the following?</legend>
+                    <label>Aspirin<input type="checkbox" name="allergicTo" id="aspirin"></label>
+                    <label>Penicillin<input type="checkbox" name="allergicTo" id="penicillin"></label>
+                    <label>Codeine<input type="checkbox" name="allergicTo" id="Codeine"></label>
+                    <label>Local Anesthetics<input type="checkbox" name="allergicTo" id="localAnesthetics"></label>
+                    <label>Acrylic<input type="checkbox" name="allergicTo" id="Acrylic"></label>
+                    <label>Metal<input type="checkbox" name="allergicTo" id="Metal"></label>
+                    <label>Latex<input type="checkbox" name="allergicTo" id="">Latex</label>
+                    <label>Sulfa Drugs<input type="checkbox" name="allergicTo" id="sulfaDrugs"></label>
+                    <label>Other<input type="checkbox" name="allergicTo" id="otherAllergic"></label><br />
+                    <label>if yes, please explain:<input type="text" id="allergicExplain"></label>
+    
+                </fieldset>
+    
+                <fieldset>
+                    <legend>Do you have, or have you had any of the following?</legend>
+
+                    <div class="grid-2">
+
+                        <div class="diseasesGrp1">
+
+                            <label>AIDS/HIV Positive: </label>
+                            <label for="aidsPositiveYes">Yes</label>
+                            <input type="radio" id="aidsPositiveYes" name="aidsPositive" value="aidsPositiveYes">
+                            <label for="aidsPositiveNo">No</label>
+                            <input type="radio" id="aidsPositiveNo" name="aidsPositive" value="aidsPositiveNo">
+                            
+                            <br />
+        
+                            <label>Alzheimer's Disease: </label>
+                            <label for="alzheimerYes">Yes</label>
+                            <input type="radio" id="alzheimerYes" name="alzheimer" value="alzheimerYes">
+                            <label for="alzheimerNo">No</label>
+                            <input type="radio" id="alzheimerNo" name="alzheimer" value="alzheimerNo">
+                            
+                            <br />
+        
+                            <label>Anaphylaxis: </label>
+                            <label for="anaphylaxisYes">Yes</label>
+                            <input type="radio" id="anaphylaxisYes" name="anaphylaxis" value="anaphylaxisYes">
+                            <label for="anaphylaxisNo">No</label>
+                            <input type="radio" id="anaphylaxisNo" name="anaphylaxis" value="anaphylaxisNo">
+        
+                            <br />
+        
+                            <label>Anemia: </label>
+                            <label for="anemiaYes">Yes</label>
+                            <input type="radio" id="anemiaYes" name="anemia" value="anemiaYes">
+                            <label for="anemiaNo">No</label>
+                            <input type="radio" id="anemiaNo" name="anemia" value="anemiaNo">
+        
+                            <br />
+        
+                            <label>Angina: </label>
+                            <label for="anginaYes">Yes</label>
+                            <input type="radio" id="anginaYes" name="angina" value="anginaYes">
+                            <label for="anginaNo">No</label>
+                            <input type="radio" id="anginaNo" name="angina" value="anginaNo">
+        
+                            <br />
+        
+                            <label>Arthritis/Gout: </label>
+                            <label for="arthritisYes">Yes</label>
+                            <input type="radio" id="arthritisYes" name="arthritis" value="arthritisYes">
+                            <label for="arthritisNo">No</label>
+                            <input type="radio" id="arthritisNo" name="arthritis" value="arthritisNo">
+        
+                            <br />
+        
+                            <label>Artificial Heart Valve: </label>
+                            <label for="heartValveYes">Yes</label>
+                            <input type="radio" id="heartValveYes" name="heartValve" value="heartValveYes">
+                            <label for="heartValveNo">No</label>
+                            <input type="radio" id="heartValveNo" name="heartValve" value="heartValveNo">
+        
+                            <br />
+        
+                            <label>Artificial Joint: </label>
+                            <label for="artificialJointYes">Yes</label>
+                            <input type="radio" id="artificialJointYes" name="artificialJoint" value="artificialJointYes">
+                            <label for="artificialJointNo">No</label>
+                            <input type="radio" id="artificialJointNo" name="artificialJoint" value="artificialJointNo">
+        
+                            <br />
+        
+                            <label>Asthma: </label>
+                            <label for="asthmaYes">Yes</label>
+                            <input type="radio" id="asthmaYes" name="asthma" value="asthmaYes">
+                            <label for="asthmaNo">No</label>
+                            <input type="radio" id="asthmaNo" name="asthma" value="asthmaNo">      
+          
+                        </div>
+
+                        <div class="diseasesGrp2">
+
+                                <label>Blood Disease: </label>
+                                <label for="bloodDiseaseYes">Yes</label>
+                                <input type="radio" id="bloodDiseaseYes" name="bloodDisease" value="bloodDiseaseYes">
+                                <label for="bloodDiseaseNo">No</label>
+                                <input type="radio" id="bloodDiseaseNo" name="bloodDisease" value="bloodDiseaseNo">
+            
+                                <br />
+            
+                                <label>Blood Transfusion: </label>
+                                <label for="bloodTransfusionYes">Yes</label>
+                                <input type="radio" id="bloodTransfusionYes" name="bloodTransfusion" value="bloodTransfusionYes">
+                                <label for="bloodTransfusionNo">No</label>
+                                <input type="radio" id="bloodTransfusionNo" name="bloodTransfusion" value="bloodTransfusionNo">
+            
+                                <br />
+            
+                                <label>Breathing Problem: </label>
+                                <label for="breathingProblemYes">Yes</label>
+                                <input type="radio" id="breathingProblemYes" name="breathingProblem" value="breathingProblemYes">
+                                <label for="breathingProblemNo">No</label>
+                                <input type="radio" id="breathingProblemNo" name="breathingProblem" value="breathingProblemNo">
+            
+                                <br />
+            
+                                <label>Bruise Easily: </label>
+                                <label for="bruiseEasilyYes">Yes</label>
+                                <input type="radio" id="bruiseEasilyYes" name="bruiseEasily" value="bruiseEasilyYes">
+                                <label for="bruiseEasilyNo">No</label>
+                                <input type="radio" id="bruiseEasilyNo" name="bruiseEasily" value="bruiseEasilyNo">
+            
+                                <br />
+            
+                                <label>Cancer: </label>
+                                <label for="cancerYes">Yes</label>
+                                <input type="radio" id="cancerYes" name="cancer" value="cancerYes">
+                                <label for="cancerNo">No</label>
+                                <input type="radio" id="cancerNo" name="cancer" value="cancerNo">
+            
+                                <br />
+            
+                                <label>Chemotherapy: </label>
+                                <label for="chemotherapyYes">Yes</label>
+                                <input type="radio" id="chemotherapyYes" name="chemotherapy" value="chemotherapyYes">
+                                <label for="chemotherapyNo">No</label>
+                                <input type="radio" id="chemotherapyNo" name="chemotherapy" value="chemotherapyNo">
+            
+                                <br />
+            
+                                <label>Chest Pains: </label>
+                                <label for="chestPainsYes">Yes</label>
+                                <input type="radio" id="chestPainsYes" name="chestPains" value="chestPainsYes">
+                                <label for="chestPainsNo">No</label>
+                                <input type="radio" id="chestPainsNo" name="chestPains" value="chestPainsNo">
+            
+                                <br />
+            
+                                <label>Cold sores / Fever Blisters: </label>
+                                <label for="coldSoresYes">Yes</label>
+                                <input type="radio" id="coldSoresYes" name="coldSores" value="coldSoresYes">
+                                <label for="coldSoresNo">No</label>
+                                <input type="radio" id="coldSoresNo" name="coldSores" value="coldSoresNo">
+            
+                                <br />
+            
+                                <label>Congenital Heart Disease: </label>
+                                <label for="congenitalHeartYes">Yes</label>
+                                <input type="radio" id="congenitalHeartYes" name="congenitalHeart" value="congenitalHeartYes">
+                                <label for="congenitalHeartNo">No</label>
+                                <input type="radio" id="congenitalHeartNo" name="congenitalHeart" value="congenitalHeartNo">  
+
+                        </div>
+
+                    </div>
+                    
+                    <label>Have you ever had any serious illness not listed above</label>
+                    <label for="notListedYes">Yes</label>
+                    <input type="radio" id="notListedYes" name="notListed" value="notListedYes">
+                    <label for="notListedNo">No</label>
+                    <input type="radio" id="notListedNo" name="notListed" value="notListedNo">
+                </fieldset>
+    
+                <fieldset>
+                    <legend>Comments:</legend>
+                    <textarea name="comments" id="comments" cols="50" rows="10"></textarea>
+                </fieldset>
+                <p>To the Best of my knowledge, the questions on this form have been accurately answered. I 
+                    understand that providing incorrect information can be dangerous to my (or patient's) health.
+                It is my responsibility to inform the dental office of any change in medical status.</p>            
+                <p>SIGNATURE OF PATIENT, PARENT or GUARDIAN________________ &nbsp;&nbsp;&nbsp; DATE________</p>
+            </form>
+            
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+
+        </fieldset>
+        <footer>
+            <p>For more awesome projects like this visit: <a href="https:/www.frameworktv.com/">FrameworkTV.com</a></p>
+        </footer>
+    </body>
+</html>
