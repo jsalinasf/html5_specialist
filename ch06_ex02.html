@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Form</title>
+        <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+        <style>
+            #bio {
+                width: 300px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- "action" is a URL that process the form -->
+        <!-- "GET" send the value of the fields in the URL, not good from a security standpoint-->
+        <form action="#" method="POST">
+            <!-- "for" must match the "id" label of the "input"-->
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName"/> <br />
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName"/> <br />
+            <label for="emailAddress">Email: </label>
+            <input type="email" id="emailAddress" name="emailAddress"> <br />
+
+            <!-- Using PLACEHOLDER instead of LABEL, another way to ask for information-->
+            <input type="tel" id="phone" placeholder="Phone Number"> <br />
+
+            <label for="bio">Biography:</label>
+            <textarea id="bio">Type your biography here...</textarea> <br />
+
+        </form>
+        <footer>
+            <p>For more awesome projects like this visit: <a href="https://www.frameworktv.com">FrameworkTV.com</a></p>
+        </footer>
+    </body>
+</html>
