@@ -19,9 +19,9 @@
         <form action="#" method="POST">
             <!-- "for" must match the "id" label of the "input"-->
             <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName"/> <br />
+            <input type="text" id="firstName" name="firstName" required="required"/> <br />
             <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName"/> <br />
+            <input type="text" id="lastName" name="lastName" maxlength="25" autocomplete="off"/> <br />
             <label for="emailAddress">Email: </label>
             <input type="email" id="emailAddress" name="emailAddress"> <br />
 
@@ -30,6 +30,14 @@
 
             <label for="bio">Biography:</label>
             <textarea id="bio">Type your biography here...</textarea> <br />
+            <input id="bands" placeholder="Band Name" list="myBands">
+            <datalist id="myBands">
+                <option value="Journey" />
+                <option value="Hearts" />
+                <option value="Rush" />
+                <option value="Styx"></option>
+                <option value="REO Speedwagon"></option>
+            </datalist>
 
         </form>
         <footer>
