@@ -6,13 +6,6 @@
         <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
-        <style>
-            .grid-2 {
-                display: grid;
-                grid-gap: 20px;
-                grid-template-columns: repeat(2, 1fr);
-            }
-        </style>
     </head>
     <body>
         <form action="#" method="POST">
@@ -139,157 +132,429 @@
                 <fieldset>
                     <legend>Do you have, or have you had any of the following?</legend>
 
-                    <div class="grid-2">
+                    <table>
+                        <tr>
+                            <td>
+                                <label>AIDS/HIV Positive: </label>
+                                <label for="aidsPositiveYes">Yes</label>
+                                <input type="radio" id="aidsPositiveYes" name="aidsPositive" value="aidsPositiveYes">
+                                <label for="aidsPositiveNo">No</label>
+                                <input type="radio" id="aidsPositiveNo" name="aidsPositive" value="aidsPositiveNo">
+                            </td>
+                            <td>
+                                <label>Cortisone Medicine: </label>
+                                <label for="cortisoneMedicineYes">Yes</label>
+                                <input type="radio" id="cortisoneMedicineYes" name="cortisoneMedicine" value="cortisoneMedicineYes">
+                                <label for="cortisoneMediciNeNo">No</label>
+                                <input type="radio" id="cortisoneMedicineNo" name="cortisoneMedicine" value="cortisoneMedicineNo">
+                            </td>
+                            <td>
+                                <label>Hemophilia: </label>
+                                <label for="hemophiliaYes">Yes</label>
+                                <input type="radio" id="hemophiliaYes" name="hemophilia" value="hemophiliaYes">
+                                <label for="hemophiliaNo">No</label>
+                                <input type="radio" id="hemophiliaNo" name="hemophilia" value="hemophiliaNo">
+                            </td>
+                            <td>
+                                <label>Radiation Treatments: </label>
+                                <label for="radiationTreatmentsYes">Yes</label>
+                                <input type="radio" id="radiationTreatmentsYes" name="radiationTreatments" value="radiationTreatmentsYes">
+                                <label for="radiationTreatmentsNo">No</label>
+                                <input type="radio" id="radiationTreatmentsNo" name="radiationTreatments" value="radiationTreatmentsNo">
+                            </td>
+                        </tr>
 
-                        <div class="diseasesGrp1">
-
-                            <label>AIDS/HIV Positive: </label>
-                            <label for="aidsPositiveYes">Yes</label>
-                            <input type="radio" id="aidsPositiveYes" name="aidsPositive" value="aidsPositiveYes">
-                            <label for="aidsPositiveNo">No</label>
-                            <input type="radio" id="aidsPositiveNo" name="aidsPositive" value="aidsPositiveNo">
-                            
-                            <br />
-        
-                            <label>Alzheimer's Disease: </label>
-                            <label for="alzheimerYes">Yes</label>
-                            <input type="radio" id="alzheimerYes" name="alzheimer" value="alzheimerYes">
-                            <label for="alzheimerNo">No</label>
-                            <input type="radio" id="alzheimerNo" name="alzheimer" value="alzheimerNo">
-                            
-                            <br />
-        
-                            <label>Anaphylaxis: </label>
-                            <label for="anaphylaxisYes">Yes</label>
-                            <input type="radio" id="anaphylaxisYes" name="anaphylaxis" value="anaphylaxisYes">
-                            <label for="anaphylaxisNo">No</label>
-                            <input type="radio" id="anaphylaxisNo" name="anaphylaxis" value="anaphylaxisNo">
-        
-                            <br />
-        
-                            <label>Anemia: </label>
-                            <label for="anemiaYes">Yes</label>
-                            <input type="radio" id="anemiaYes" name="anemia" value="anemiaYes">
-                            <label for="anemiaNo">No</label>
-                            <input type="radio" id="anemiaNo" name="anemia" value="anemiaNo">
-        
-                            <br />
-        
-                            <label>Angina: </label>
-                            <label for="anginaYes">Yes</label>
-                            <input type="radio" id="anginaYes" name="angina" value="anginaYes">
-                            <label for="anginaNo">No</label>
-                            <input type="radio" id="anginaNo" name="angina" value="anginaNo">
-        
-                            <br />
-        
-                            <label>Arthritis/Gout: </label>
-                            <label for="arthritisYes">Yes</label>
-                            <input type="radio" id="arthritisYes" name="arthritis" value="arthritisYes">
-                            <label for="arthritisNo">No</label>
-                            <input type="radio" id="arthritisNo" name="arthritis" value="arthritisNo">
-        
-                            <br />
-        
-                            <label>Artificial Heart Valve: </label>
-                            <label for="heartValveYes">Yes</label>
-                            <input type="radio" id="heartValveYes" name="heartValve" value="heartValveYes">
-                            <label for="heartValveNo">No</label>
-                            <input type="radio" id="heartValveNo" name="heartValve" value="heartValveNo">
-        
-                            <br />
-        
-                            <label>Artificial Joint: </label>
-                            <label for="artificialJointYes">Yes</label>
-                            <input type="radio" id="artificialJointYes" name="artificialJoint" value="artificialJointYes">
-                            <label for="artificialJointNo">No</label>
-                            <input type="radio" id="artificialJointNo" name="artificialJoint" value="artificialJointNo">
-        
-                            <br />
-        
-                            <label>Asthma: </label>
-                            <label for="asthmaYes">Yes</label>
-                            <input type="radio" id="asthmaYes" name="asthma" value="asthmaYes">
-                            <label for="asthmaNo">No</label>
-                            <input type="radio" id="asthmaNo" name="asthma" value="asthmaNo">      
-          
-                        </div>
-
-                        <div class="diseasesGrp2">
-
+                        <tr>
+                            <td>
+                                <label>Alzheimer's Disease: </label>
+                                <label for="alzheimerYes">Yes</label>
+                                <input type="radio" id="alzheimerYes" name="alzheimer" value="alzheimerYes">
+                                <label for="alzheimerNo">No</label>
+                                <input type="radio" id="alzheimerNo" name="alzheimer" value="alzheimerNo">
+                            </td>
+                            <td>
+                                <label>Diabetes: </label>
+                                <label for="diabetesYes">Yes</label>
+                                <input type="radio" id="diabetesYes" name="diabetes" value="diabetesYes">
+                                <label for="diabetesNo">No</label>
+                                <input type="radio" id="diabetesNo" name="diabetes" value="diabetesNo">
+                            </td>
+                            <td>
+                                <label>Hepatitis A: </label>
+                                <label for="hepatitisAYes">Yes</label>
+                                <input type="radio" id="hepatitisAYes" name="hepatitisA" value="hepatitisAYes">
+                                <label for="hepatitisANo">No</label>
+                                <input type="radio" id="hepatitisANo" name="hepatitisA" value="hepatitisANo">
+                            </td>
+                            <td>
+                                <label>Recent Weight Loss: </label>
+                                <label for="recentWeightYes">Yes</label>
+                                <input type="radio" id="recentWeightYes" name="recentWeight" value="recentWeightYes">
+                                <label for="recentWeightNo">No</label>
+                                <input type="radio" id="recentWeightNo" name="recentWeight" value="recentWeightNo">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Anaphylaxis: </label>
+                                <label for="anaphylaxisYes">Yes</label>
+                                <input type="radio" id="anaphylaxisYes" name="anaphylaxis" value="anaphylaxisYes">
+                                <label for="anaphylaxisNo">No</label>
+                                <input type="radio" id="anaphylaxisNo" name="anaphylaxis" value="anaphylaxisNo">
+                            </td>
+                            <td>
+                                <label>Drug Addiction: </label>
+                                <label for="drugAddictionYes">Yes</label>
+                                <input type="radio" id="drugAddictionYes" name="drugAddiction" value="drugAddictionYes">
+                                <label for="drugAddictionNo">No</label>
+                                <input type="radio" id="drugAddictionNo" name="drugAddiction" value="drugAddictionNo">
+                            </td>
+                            <td>
+                                <label>Hepatitis B or C: </label>
+                                <label for="hepatitisBCYes">Yes</label>
+                                <input type="radio" id="hepatitisBCYes" name="hepatitisBC" value="hepatitisBCYes">
+                                <label for="hepatitisBCNo">No</label>
+                                <input type="radio" id="hepatitisBCNo" name="hepatitisBC" value="hepatitisBCNo">
+                            </td>
+                            <td>
+                                <label>Renal Dialysis: </label>
+                                <label for="renalDialysisYes">Yes</label>
+                                <input type="radio" id="renalDialysisYes" name="renalDialysis" value="renalDialysisYes">
+                                <label for="renalDialysisNo">No</label>
+                                <input type="radio" id="renalDialysisNo" name="renalDialysis" value="renalDialysisNo">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Anemia: </label>
+                                <label for="anemiaYes">Yes</label>
+                                <input type="radio" id="anemiaYes" name="anemia" value="anemiaYes">
+                                <label for="anemiaNo">No</label>
+                                <input type="radio" id="anemiaNo" name="anemia" value="anemiaNo">
+                            </td>                       
+                            <td>
+                                <label>Easily Winded: </label>
+                                <label for="easilyWindedYes">Yes</label>
+                                <input type="radio" id="easilyWindedYes" name="easilyWinded" value="easilyWindedYes">
+                                <label for="easilyWindedNo">No</label>
+                                <input type="radio" id="easilyWindedNo" name="easilyWinded" value="easilyWindedNo">
+                            </td>
+                            <td>
+                                <label>Herpes: </label>
+                                <label for="herpesYes">Yes</label>
+                                <input type="radio" id="herpesYes" name="herpes" value="herpesYes">
+                                <label for="herpesNo">No</label>
+                                <input type="radio" id="herpesNo" name="herpes" value="herpesNo">
+                            </td>
+                            <td>
+                                <label>Rheumatic Fever: </label>
+                                <label for="rheumaticFeverYes">Yes</label>
+                                <input type="radio" id="rheumaticFeverYes" name="rheumaticFever" value="rheumaticFeverYes">
+                                <label for="rheumaticFeverNo">No</label>
+                                <input type="radio" id="rheumaticFeverNo" name="rheumaticFever" value="rheumaticFeverNo">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Angina: </label>
+                                <label for="anginaYes">Yes</label>
+                                <input type="radio" id="anginaYes" name="angina" value="anginaYes">
+                                <label for="anginaNo">No</label>
+                                <input type="radio" id="anginaNo" name="angina" value="anginaNo">
+                            </td>
+                            <td>
+                                <label>Emphysema: </label>
+                                <label for="emphysemaYes">Yes</label>
+                                <input type="radio" id="emphysemaYes" name="emphysema" value="emphysemaYes">
+                                <label for="emphysemaNo">No</label>
+                                <input type="radio" id="emphysemaNo" name="emphysema" value="emphysemaNo">
+                            </td>
+                            <td>
+                                <label>High Blood Pressure: </label>
+                                <label for="highBloodYes">Yes</label>
+                                <input type="radio" id="highBloodYes" name="highBlood" value="highBloodYes">
+                                <label for="highBloodNo">No</label>
+                                <input type="radio" id="highBloodNo" name="highBlood" value="highBloodNo">
+                            </td>
+                            <td>
+                                <label>Rheumatism: </label>
+                                <label for="rheumatismYes">Yes</label>
+                                <input type="radio" id="rheumatismYes" name="rheumatism" value="rheumatismYes">
+                                <label for="rheumatismNo">No</label>
+                                <input type="radio" id="rheumatismNo" name="rheumatism" value="rheumatismNo">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Arthritis/Gout: </label>
+                                <label for="arthritisYes">Yes</label>
+                                <input type="radio" id="arthritisYes" name="arthritis" value="arthritisYes">
+                                <label for="arthritisNo">No</label>
+                                <input type="radio" id="arthritisNo" name="arthritis" value="arthritisNo">
+                            </td>
+                            <td>
+                                <label>Epilepsy or Seizures: </label>
+                                <label for="epilepsyYes">Yes</label>
+                                <input type="radio" id="epilepsyYes" name="epilepsy" value="epilepsyYes">
+                                <label for="epilepsyNo">No</label>
+                                <input type="radio" id="epilepsyNo" name="epilepsy" value="epilepsyNo">
+                            </td>
+                            <td>
+                                <label>High Cholesterol: </label>
+                                <label for="highCholesterolYes">Yes</label>
+                                <input type="radio" id="highCholesterolYes" name="highCholesterol" value="highCholesterolYes">
+                                <label for="highCholesterolNo">No</label>
+                                <input type="radio" id="highCholesterolNo" name="highCholesterol" value="highCholesterolNo">
+                            </td>
+                            <td>
+                                <label>Scarlet Fever: </label>
+                                <label for="scarletFeverYes">Yes</label>
+                                <input type="radio" id="scarletFeverYes" name="scarletFever" value="scarletFeverYes">
+                                <label for="scarletFeverNo">No</label>
+                                <input type="radio" id="scarletFeverNo" name="scarletFever" value="scarletFeverNo">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Artificial Heart Valve: </label>
+                                <label for="heartValveYes">Yes</label>
+                                <input type="radio" id="heartValveYes" name="heartValve" value="heartValveYes">
+                                <label for="heartValveNo">No</label>
+                                <input type="radio" id="heartValveNo" name="heartValve" value="heartValveNo">
+                            </td>
+                            <td>
+                                <label>Excessive Bleeding: </label>
+                                <label for="excessiveBleedingYes">Yes</label>
+                                <input type="radio" id="excessiveBleedingYes" name="excessiveBleeding" value="excessiveBleedingYes">
+                                <label for="excessiveBleedingNo">No</label>
+                                <input type="radio" id="excessiveBleedingNo" name="excessiveBleeding" value="excessiveBleedingNo">
+                            </td>
+                            <td>
+                                <label>Hives or Rash: </label>
+                                <label for="hivesRashYes">Yes</label>
+                                <input type="radio" id="hivesRashYes" name="hivesRash" value="hivesRashYes">
+                                <label for="hivesRashNo">No</label>
+                                <input type="radio" id="hivesRashNo" name="hivesRash" value="hivesRashNo">
+                            </td>
+                            <td>
+                                <label>Shingles: </label>
+                                <label for="shinglesYes">Yes</label>
+                                <input type="radio" id="shinglesYes" name="shingles" value="shinglesYes">
+                                <label for="shinglesNo">No</label>
+                                <input type="radio" id="shinglesNo" name="shingles" value="shinglesNo">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Artificial Joint: </label>
+                                <label for="artificialJointYes">Yes</label>
+                                <input type="radio" id="artificialJointYes" name="artificialJoint" value="artificialJointYes">
+                                <label for="artificialJointNo">No</label>
+                                <input type="radio" id="artificialJointNo" name="artificialJoint" value="artificialJointNo">
+                            </td>
+                            <td>
+                                <label>Excessive Thirst: </label>
+                                <label for="excessiveThirstYes">Yes</label>
+                                <input type="radio" id="excessiveThirstYes" name="excessiveThirst" value="excessiveThirstYes">
+                                <label for="excessiveThirstNo">No</label>
+                                <input type="radio" id="excessiveThirstNo" name="excessiveThirst" value="excessiveThirstNo">
+                            </td>
+                            <td>
+                                <label>Hypoglycemia: </label>
+                                <label for="hypoglycemiaYes">Yes</label>
+                                <input type="radio" id="hypoglycemiaYes" name="hypoglycemia" value="hypoglycemiaYes">
+                                <label for="hypoglycemiaNo">No</label>
+                                <input type="radio" id="hypoglycemiaNo" name="hypoglycemia" value="hypoglycemiaNo">
+                            </td>
+                            <td>
+                                <label>Sickle Cell Disease: </label>
+                                <label for="sickleCellYes">Yes</label>
+                                <input type="radio" id="sickleCellYes" name="sickleCell" value="sickleCellYes">
+                                <label for="sickleCellNo">No</label>
+                                <input type="radio" id="sickleCellNo" name="sickleCell" value="sickleCellNo">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Asthma: </label>
+                                <label for="asthmaYes">Yes</label>
+                                <input type="radio" id="asthmaYes" name="asthma" value="asthmaYes">
+                                <label for="asthmaNo">No</label>
+                                <input type="radio" id="asthmaNo" name="asthma" value="asthmaNo">   
+                            </td>
+                            <td>
+                                <label>Fainting Spells / Dizziness: </label>
+                                <label for="faintingSpellsYes">Yes</label>
+                                <input type="radio" id="faintingSpellsYes" name="faintingSpells" value="faintingSpellsYes">
+                                <label for="faintingSpellsNo">No</label>
+                                <input type="radio" id="faintingSpellsNo" name="faintingSpells" value="faintingSpellsNo">   
+                            </td>
+                            <td>
+                                <label>Irregular Heartbeat: </label>
+                                <label for="irregularHeartbeatYes">Yes</label>
+                                <input type="radio" id="irregularHeartbeatYes" name="irregularHeartbeat" value="irregularHeartbeatYes">
+                                <label for="irregularHeartbeatNo">No</label>
+                                <input type="radio" id="irregularHeartbeatNo" name="irregularHeartbeat" value="irregularHeartbeatNo">   
+                            </td>
+                            <td>
+                                <label>Sinus Trouble: </label>
+                                <label for="sinusTroubleYes">Yes</label>
+                                <input type="radio" id="sinusTroubleYes" name="sinusTrouble" value="sinusTroubleYes">
+                                <label for="sinusTroubleNo">No</label>
+                                <input type="radio" id="sinusTroubleNo" name="sinusTrouble" value="sinusTroubleNo">   
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
                                 <label>Blood Disease: </label>
                                 <label for="bloodDiseaseYes">Yes</label>
                                 <input type="radio" id="bloodDiseaseYes" name="bloodDisease" value="bloodDiseaseYes">
                                 <label for="bloodDiseaseNo">No</label>
                                 <input type="radio" id="bloodDiseaseNo" name="bloodDisease" value="bloodDiseaseNo">
-            
-                                <br />
-            
+                            </td>
+                            <td>
+                                <label>Frequent Cough: </label>
+                                <label for="frequentCoughYes">Yes</label>
+                                <input type="radio" id="frequentCoughYes" name="frequentCough" value="frequentCoughYes">
+                                <label for="frequentCoughNo">No</label>
+                                <input type="radio" id="frequentCoughNo" name="frequentCough" value="frequentCoughNo">
+                            </td>
+                            <td>
+                                <label>Kidney Problems: </label>
+                                <label for="kidneyProblemsYes">Yes</label>
+                                <input type="radio" id="kidneyProblemsYes" name="kidneyProblems" value="kidneyProblemsYes">
+                                <label for="kidneyProblemsNo">No</label>
+                                <input type="radio" id="kidneyProblemsNo" name="kidneyProblems" value="kidneyProblemsNo">
+                            </td>
+                            <td>
+                                <label>Spina Bifida: </label>
+                                <label for="spinabifidaYes">Yes</label>
+                                <input type="radio" id="spinabifidaYes" name="spinabifida" value="spinabifidaYes">
+                                <label for="spinabifidaNo">No</label>
+                                <input type="radio" id="spinabifidaNo" name="spinabifida" value="spinabifidaNo">
+                            </td>                            
+                        </tr>
+                        <tr>
+                            <td>
                                 <label>Blood Transfusion: </label>
                                 <label for="bloodTransfusionYes">Yes</label>
                                 <input type="radio" id="bloodTransfusionYes" name="bloodTransfusion" value="bloodTransfusionYes">
                                 <label for="bloodTransfusionNo">No</label>
                                 <input type="radio" id="bloodTransfusionNo" name="bloodTransfusion" value="bloodTransfusionNo">
-            
-                                <br />
-            
+                            </td>
+                            <td>
+                                <label>Frequent Diarrhea: </label>
+                                <label for="frequentDiarrheaYes">Yes</label>
+                                <input type="radio" id="frequentDiarrheaYes" name="frequentDiarrhea" value="frequentDiarrheaYes">
+                                <label for="frequentDiarrheaNo">No</label>
+                                <input type="radio" id="frequentDiarrheaNo" name="frequentDiarrhea" value="frequentDiarrheaNo">
+                            </td>
+                            <td>
+                                <label>Leukemia: </label>
+                                <label for="leukemiaYes">Yes</label>
+                                <input type="radio" id="leukemiaYes" name="leukemia" value="leukemiaYes">
+                                <label for="leukemiaNo">No</label>
+                                <input type="radio" id="leukemiaNo" name="leukemia" value="leukemiaNo">
+                            </td>
+                            <td>
+                                <label>Stomach/Intestinal Disease: </label>
+                                <label for="stomachIntestinalYes">Yes</label>
+                                <input type="radio" id="stomachIntestinalYes" name="stomachIntestinal" value="stomachIntestinalYes">
+                                <label for="stomachIntestinalNo">No</label>
+                                <input type="radio" id="stomachIntestinalNo" name="stomachIntestinal" value="stomachIntestinalNo">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
                                 <label>Breathing Problem: </label>
                                 <label for="breathingProblemYes">Yes</label>
                                 <input type="radio" id="breathingProblemYes" name="breathingProblem" value="breathingProblemYes">
                                 <label for="breathingProblemNo">No</label>
                                 <input type="radio" id="breathingProblemNo" name="breathingProblem" value="breathingProblemNo">
-            
-                                <br />
-            
+                            </td>
+                            <td>
+                                <label>Frequent Headaches: </label>
+                                <label for="frequentHeadachesYes">Yes</label>
+                                <input type="radio" id="frequentHeadachesYes" name="frequentHeadaches" value="frequentHeadachesYes">
+                                <label for="frequentHeadachesNo">No</label>
+                                <input type="radio" id="frequentHeadachesNo" name="frequentHeadaches" value="frequentHeadachesNo">
+                            </td>
+                            <td>
+                                <label>Liver Disease: </label>
+                                <label for="liverProblemsYes">Yes</label>
+                                <input type="radio" id="liverProblemsYes" name="liverProblems" value="liverProblemsYes">
+                                <label for="liverProblemsNo">No</label>
+                                <input type="radio" id="liverProblemsNo" name="liverProblems" value="liverProblemsNo">
+                            </td>
+                            <td>
+                                <label>Stroke: </label>
+                                <label for="strokeYes">Yes</label>
+                                <input type="radio" id="strokeYes" name="stroke" value="strokeYes">
+                                <label for="strokeNo">No</label>
+                                <input type="radio" id="strokeNo" name="stroke" value="strokeNo">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
                                 <label>Bruise Easily: </label>
                                 <label for="bruiseEasilyYes">Yes</label>
                                 <input type="radio" id="bruiseEasilyYes" name="bruiseEasily" value="bruiseEasilyYes">
                                 <label for="bruiseEasilyNo">No</label>
                                 <input type="radio" id="bruiseEasilyNo" name="bruiseEasily" value="bruiseEasilyNo">
-            
-                                <br />
-            
+                            </td>
+                            <td>
+                                <label>Genital Herpes: </label>
+                                <label for="genitalHerpesYes">Yes</label>
+                                <input type="radio" id="genitalHerpesYes" name="genitalHerpes" value="genitalHerpesYes">
+                                <label for="genitalHerpesNo">No</label>
+                                <input type="radio" id="genitalHerpesNo" name="genitalHerpes" value="genitalHerpesNo">
+                            </td>
+                            <td>
+                                <label>Low Blood Pressure: </label>
+                                <label for="lowBloodPressureYes">Yes</label>
+                                <input type="radio" id="lowBloodPressureYes" name="lowBloodPressure" value="lowBloodPressureYes">
+                                <label for="lowBloodPressureNo">No</label>
+                                <input type="radio" id="lowBloodPressureNo" name="lowBloodPressure" value="lowBloodPressureNo">
+                            </td>
+                            <td>
+                                <label>Swelling of Limbs: </label>
+                                <label for="swellingLimbsYes">Yes</label>
+                                <input type="radio" id="swellingLimbsYes" name="swellingLimbs" value="swellingLimbsYes">
+                                <label for="swellingLimbsNo">No</label>
+                                <input type="radio" id="swellingLimbsNo" name="swellingLimbs" value="swellingLimbsNo">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
                                 <label>Cancer: </label>
                                 <label for="cancerYes">Yes</label>
                                 <input type="radio" id="cancerYes" name="cancer" value="cancerYes">
                                 <label for="cancerNo">No</label>
                                 <input type="radio" id="cancerNo" name="cancer" value="cancerNo">
-            
-                                <br />
-            
-                                <label>Chemotherapy: </label>
-                                <label for="chemotherapyYes">Yes</label>
-                                <input type="radio" id="chemotherapyYes" name="chemotherapy" value="chemotherapyYes">
-                                <label for="chemotherapyNo">No</label>
-                                <input type="radio" id="chemotherapyNo" name="chemotherapy" value="chemotherapyNo">
-            
-                                <br />
-            
-                                <label>Chest Pains: </label>
-                                <label for="chestPainsYes">Yes</label>
-                                <input type="radio" id="chestPainsYes" name="chestPains" value="chestPainsYes">
-                                <label for="chestPainsNo">No</label>
-                                <input type="radio" id="chestPainsNo" name="chestPains" value="chestPainsNo">
-            
-                                <br />
-            
-                                <label>Cold sores / Fever Blisters: </label>
-                                <label for="coldSoresYes">Yes</label>
-                                <input type="radio" id="coldSoresYes" name="coldSores" value="coldSoresYes">
-                                <label for="coldSoresNo">No</label>
-                                <input type="radio" id="coldSoresNo" name="coldSores" value="coldSoresNo">
-            
-                                <br />
-            
-                                <label>Congenital Heart Disease: </label>
-                                <label for="congenitalHeartYes">Yes</label>
-                                <input type="radio" id="congenitalHeartYes" name="congenitalHeart" value="congenitalHeartYes">
-                                <label for="congenitalHeartNo">No</label>
-                                <input type="radio" id="congenitalHeartNo" name="congenitalHeart" value="congenitalHeartNo">  
-
-                        </div>
-
-                    </div>
+                            </td>
+                            <td>
+                                <label>Glaucoma: </label>
+                                <label for="glaucomaYes">Yes</label>
+                                <input type="radio" id="glaucomaYes" name="glaucoma" value="glaucomaYes">
+                                <label for="glaucomaNo">No</label>
+                                <input type="radio" id="glaucomaNo" name="glaucoma" value="glaucomaNo">
+                            </td>
+                            <td>
+                                <label>Lung Disease: </label>
+                                <label for="lungDiseaseYes">Yes</label>
+                                <input type="radio" id="lungDiseaseYes" name="lungDisease" value="lungDiseaseYes">
+                                <label for="lungDiseaseNo">No</label>
+                                <input type="radio" id="lungDiseaseNo" name="lungDisease" value="lungDiseaseNo">
+                            </td>
+                            <td>
+                                <label>Thyroid Disease: </label>
+                                <label for="thyroidDiseaseYes">Yes</label>
+                                <input type="radio" id="thyroidDiseaseYes" name="thyroidDisease" value="thyroidDiseaseYes">
+                                <label for="thyroidDiseaseNo">No</label>
+                                <input type="radio" id="thyroidDiseaseNo" name="thyroidDisease" value="thyroidDiseaseNo">
+                            </td>
+                        </tr>
+                    </table>
                     
                     <label>Have you ever had any serious illness not listed above</label>
                     <label for="notListedYes">Yes</label>
@@ -306,12 +571,12 @@
                     understand that providing incorrect information can be dangerous to my (or patient's) health.
                 It is my responsibility to inform the dental office of any change in medical status.</p>            
                 <p>SIGNATURE OF PATIENT, PARENT or GUARDIAN________________ &nbsp;&nbsp;&nbsp; DATE________</p>
-            </form>
+            </fieldset>
             
             <button type="submit">Submit</button>
             <button type="reset">Reset</button>
 
-        </fieldset>
+        </form>
         <footer>
             <p>For more awesome projects like this visit: <a href="https:/www.frameworktv.com/">FrameworkTV.com</a></p>
         </footer>
