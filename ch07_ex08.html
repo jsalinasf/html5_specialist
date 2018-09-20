@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Let's learn about CANVAS">
+    <title>Canvas</title>
+    <style>
+        #myCanvas {
+            background-color: #ccc;
+        }
+    </style>
+    <script>
+        window.onload = function()
+        {
+            var canvas = document.getElementById("myCanvas");
+            var context = canvas.getContext("2d");
+            context.fillStyle = "#1100FF";
+            context.fillRect(50,50,150,75);
+            context.moveTo(250,75);
+            context.lineTo(275,300);
+            context.stroke();
+
+        }
+    </script>
+</head>
+<body>
+
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+
+    <!-- Reference to FrameworkTV-->
+    <footer>
+        <p>For more awesome projects like this visit: <a href="https://www.frameworktv.com">FrameworkTV.com</a></p>
+    </footer>
+    
+</body>
+</html>
