@@ -1,0 +1,29 @@
+/* TAG Selector*/
+h1 {
+    color: #cc0000;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;    
+    font-size: 4em;
+}
+
+/* TAG Selector*/
+span {
+    color: #ff0000;
+    font-size: 2em;
+    font-style: oblique;
+}
+
+/* CLASS Selector*/
+.emphasize {
+    color: #0000cc;
+    font-size: 1.15em;
+}
+
+
+/* ID Selector*/
+#otherEmphasize {
+    color: #007700;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.50em;
+
+}
