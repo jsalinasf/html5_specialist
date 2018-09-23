@@ -4,15 +4,63 @@
     <meta charset="UTF-8">
     <meta name="description" content="Here we will introduce the CSS Box Model">
     <title>CSS Box Model</title>
-    
     <!-- Now we gonna use CSS in the Head of the document-->
     <style>
+        body {
+            /* Remove the Browse Default margin*/
+            margin: 0px;
+        }
+        #open {
+            
+            background-color: lightgray;
+
+            width: 400px;            
+            
+            /* Pay attention to the padding. The Box Padding is adding
+            to the H1 and P paddings,d thats why it seems to be more padding at
+            the top and at the bottom of the BOX */
+            
+            /* It is the white space between the content and the margin */
+            padding: 20px; 
+            /* padding applies to all sites of the box but we also
+            have other options: padding-left & padding-top*/
+
+            /* Now pay attention to the total width we have for the box:
+            10px of padding at the left, 
+            400px as of the box padding and
+            10px of padding at the right 
+            for a total of 420px of padding */
+
+            
+            /* We could use only "border' for all 4 sides, in here Im just
+            showing off*/            
+            border-top: 15px solid #0000cc;
+            border-left: 15px dashed #00cccc;
+            border-right: 15px solid black;
+            border-bottom: 15px dashed lawngreen;
+
+            /* Now pay attention to the total width we have for the box:
+            15px of left margin,
+            10px of padding at the left, 
+            400px as of the box padding and
+            10px of padding at the right 
+            15 px of right border
+            for a total of 450px of padding */
+
+            /* It is the between my box and the other boxes or the edge of the
+            Browser Windows
+            Pay attention to the space between the paragraph and the image*/
+            margin-bottom: 80px;
+            /* We could use only "margin' for all 4 sides, in here Im just
+            showing off*/   
+        }
 
     </style>
 
 </head>
 <body>
     
+    <!-- This DIV is "THE BOX"-->
     <div id="open">
     
         <h1>Typography 101</h1>
@@ -30,6 +78,8 @@
             voluptatem, illum explicabo tenetur animi ut incidunt?</p>
     
     </div>
+
+    <img src="images/CSS_Box_Model.png" alt="CSS Box Model" srcset="">
 
     <footer>
         <p>For more awesome projects like this visit: <a href="https://www.frameworktv.com">FrameworkTV.com</a></p>
